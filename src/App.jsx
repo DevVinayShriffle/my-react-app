@@ -70,3 +70,5 @@ function App() {
 }
 
 export default App;
+
+/* useState, useReducer, useEffect, useContext, useRef, (useCallback, useMemo) */

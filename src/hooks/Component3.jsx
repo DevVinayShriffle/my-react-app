@@ -6,7 +6,8 @@ function Component3() {
   return (
     <>
       <h1>Component 3</h1>
-      <h2>{`Hello ${user} again!`}</h2>
+      <h2>{`Hello ${user.user} again!`}</h2>
+      <button onClick={()=>user.setUser("Victory")}>Changed name from component-3</button>
     </>
   );
 }

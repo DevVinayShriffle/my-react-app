@@ -17,6 +17,19 @@ import BikeProducts from './props/BikeProducts'
 import CarProducts from './props/CarProducts'
 import Info from './props/Info'
 import NotFound from './props/NotFound'
+import Color from './hooks/Color'
+import Count from './hooks/Count'
+import Global from './hooks/Global'
+import Component2 from './hooks/Component2'
+import Component3 from './hooks/Component3'
+import Render from './hooks/Render'
+import Dom from './hooks/Dom'
+import Score from './hooks/Score'
+import Without from './hooks/Without'
+import With from './hooks/With'
+import WithoutMemo from './hooks/WithoutMemo'
+import WithMemo from './hooks/WithMemo'
+import SuperherosData from'./hooks/SuperherosData'
  
 function App() {
   const [open, setOpen ] = useState(false)
@@ -59,6 +72,28 @@ function App() {
         <Route path="/products" element={<Product />} >
           <Route path="car" element={<CarProducts />} />
           <Route path="bike" element={<BikeProducts />} />
+        </Route>
+
+        <Route path="/hooks">
+          <Route path="state" element={<Color />} />
+          <Route path="effect" element={<Count />} />
+          <Route path="context" element={<Global />} >
+            <Route path="com-2" element={<Component2 />} />
+            <Route path="com-3" element={<Component3 />} />
+          </Route>
+          <Route path="ref" element={<Render />} >
+            <Route path="dom" element={<Dom />} />
+          </Route>
+          <Route path="reducer" element={<Score />} />
+          <Route path="callback">
+            <Route path="without" element={<Without />} />
+            <Route path="with" element={<With />} />
+          </Route>
+          <Route path="memo">
+            <Route path="without" element={<WithoutMemo />} />
+            <Route path="with" element={<WithMemo />} />
+          </Route>
+          <Route path="api" element={<SuperherosData />} />
         </Route>
 
         {/* Catch-all Route: Placed last */}
